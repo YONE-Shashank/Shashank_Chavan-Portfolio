@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <title>Shashank Chavan | Portfolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" defer></script>
@@ -47,14 +47,17 @@
             width: 100%;
         }
         .skill-bar {
-            height: 8px;
-            border-radius: 4px;
+            height: 14px; /* increased height */
+            border-radius: 7px;
             background-color: #1e293b;
         }
         .skill-progress {
             height: 100%;
-            border-radius: 4px;
+            border-radius: 7px;
             background: linear-gradient(90deg, #8b5cf6 0%, #6366f1 100%);
+        }
+        #skills span.font-medium {
+            font-size: 1.25rem; /* increase skill label size */
         }
         /* Animation classes */
         .fade-in {
@@ -94,7 +97,7 @@
     <!-- Navigation -->
     <header class="fixed w-full bg-gray-900 bg-opacity-90 shadow-lg z-10 backdrop-filter backdrop-blur-md">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#home" class="text-xl font-bold text-white">Your Name</a>
+            <a href="#home" class="text-xl font-bold text-white">Shashank Chavan</a>
             <div class="hidden md:flex space-x-6">
                 <a href="#home" class="nav-link text-gray-300 hover:text-purple-400">Home</a>
                 <a href="#about" class="nav-link text-gray-300 hover:text-purple-400">About</a>
@@ -121,14 +124,26 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+   <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 px-4">
         <div class="container mx-auto text-center fade-in">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Hello, I'm <span class="text-gradient">Your Name</span></h1>
-            <p class="text-xl md:text-2xl text-gray-400 mb-8">Web Developer & Designer</p>
-            <a href="#projects" class="btn-gradient text-white px-8 py-3 rounded-full inline-block shadow-lg">View My Work</a>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-gradient">Shashank Chavan</span></h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-4">
+                Web Developer | Python Programmer | Red Hat Certified | AWS Enthusiast | Power BI Analyst | Java Developer
+            </p>
+            <p class="text-lg md:text-xl text-gray-300 mb-8">
+                <p class="text-lg md:text-xl text-gray-300 mb-8">
+                    I design websites, code in Python and Java, analyze data with Power BI, and continuously upskill in AWS and Red Hat technologies.
+                </p>                
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#projects" class="btn-gradient text-white px-8 py-3 rounded-full inline-block shadow-lg">View My Work</a>
+                <a href="Shashank_Chavan_Resume.pdf" download class="border border-white text-white px-8 py-3 rounded-full inline-block hover:bg-white hover:text-gray-900 transition">Download Resume</a>
+            </div>
         </div>
     </section>
+
+
 
     <!-- About Section -->
     <section id="about" class="py-20 px-4 bg-gray-900">
@@ -137,7 +152,7 @@
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/3 mb-8 md:mb-0 fade-in">
                     <div class="rounded-full overflow-hidden w-56 h-56 mx-auto border-4 border-purple-500 shadow-lg shadow-purple-500/20">
-                        <img src="/api/placeholder/400/400" alt="Your Name" class="w-full h-full object-cover">
+                        <img src="PROFILE.jpeg" alt="Your Name" class="w-full h-full object-cover">
                     </div>
                 </div>
                 <div class="md:w-2/3 md:pl-12 fade-in">
@@ -153,16 +168,17 @@
                         and staying updated with the latest industry trends.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition duration-300 shadow-md">
+                        <a href="https://github.com/YONE-Shashank" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition duration-300 shadow-md">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="bg-blue-700 hover:bg-blue-600 text-white p-3 rounded-full transition duration-300 shadow-md">
+                        <a href="https://www.linkedin.com/in/shashank87/" target="_blank" class="bg-blue-700 hover:bg-blue-600 text-white p-3 rounded-full transition duration-300 shadow-md">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                         <a href="#" class="bg-purple-600 hover:bg-purple-500 text-white p-3 rounded-full transition duration-300 shadow-md">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -175,59 +191,53 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="fade-in">
                     <div class="mb-8">
-                        <div class="flex justify-between mb-2">
-                            <span class="font-medium text-white">HTML5 & CSS3</span>
-                            <span class="text-purple-300">90%</span>
-                        </div>
+                        <span class="font-medium text-white">Web Development</span>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 90%"></div>
                         </div>
                     </div>
                     <div class="mb-8">
-                        <div class="flex justify-between mb-2">
-                            <span class="font-medium text-white">JavaScript</span>
-                            <span class="text-purple-300">85%</span>
-                        </div>
+                        <span class="font-medium text-white">Python</span>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 85%"></div>
                         </div>
                     </div>
                     <div class="mb-8">
-                        <div class="flex justify-between mb-2">
-                            <span class="font-medium text-white">React</span>
-                            <span class="text-purple-300">80%</span>
-                        </div>
+                        <span class="font-medium text-white">Red Hat Linux</span>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-8">
+                        <span class="font-medium text-white">AWS</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
                         </div>
                     </div>
                 </div>
                 <div class="fade-in">
                     <div class="mb-8">
-                        <div class="flex justify-between mb-2">
-                            <span class="font-medium text-white">Node.js</span>
-                            <span class="text-purple-300">75%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-8">
-                        <div class="flex justify-between mb-2">
-                            <span class="font-medium text-white">UI/UX Design</span>
-                            <span class="text-purple-300">70%</span>
-                        </div>
+                        <span class="font-medium text-white">Power BI</span>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 70%"></div>
                         </div>
                     </div>
                     <div class="mb-8">
-                        <div class="flex justify-between mb-2">
-                            <span class="font-medium text-white">Database Management</span>
-                            <span class="text-purple-300">65%</span>
-                        </div>
+                        <span class="font-medium text-white">Java</span>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 65%"></div>
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-8">
+                        <span class="font-medium text-white">SQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 78%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-8">
+                        <span class="font-medium text-white">UI/UX Design</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
                         </div>
                     </div>
                 </div>
@@ -235,23 +245,24 @@
         </div>
     </section>
 
+
     <!-- Projects Section -->
     <section id="projects" class="py-20 px-4 bg-gray-900">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold mb-12 section-heading inline-block text-white">My Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
+                <!-- Project 1: Bloggerings -->
                 <div class="glass-card rounded-lg overflow-hidden hover-translate fade-in shadow-xl">
                     <div class="h-48 overflow-hidden">
-                        <img src="/api/placeholder/600/400" alt="Project 1" class="w-full h-full object-cover">
+                        <img src="/api/placeholder/600/400" alt="Bloggerings" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-white">E-Commerce Platform</h3>
-                        <p class="text-gray-400 mb-4">A responsive e-commerce website with shopping cart functionality and payment integration.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Bloggerings</h3>
+                        <p class="text-gray-400 mb-4">A responsive blog creation platform built with HTML, CSS, Tailwind CSS, Figma, and Canva, versioned using Git.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">React</span>
-                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Node.js</span>
-                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">MongoDB</span>
+                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">HTML</span>
+                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Tailwind CSS</span>
+                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Figma</span>
                         </div>
                         <div class="flex space-x-3">
                             <a href="#" class="text-purple-400 hover:text-purple-300">View Project</a>
@@ -259,19 +270,19 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project 2 -->
+
+                <!-- Project 2: Pick and Place Robot -->
                 <div class="glass-card rounded-lg overflow-hidden hover-translate fade-in shadow-xl">
                     <div class="h-48 overflow-hidden">
-                        <img src="/api/placeholder/600/400" alt="Project 2" class="w-full h-full object-cover">
+                        <img src="/api/placeholder/600/400" alt="Pick and Place Robot" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-white">Task Management App</h3>
-                        <p class="text-gray-400 mb-4">A productivity application that helps users organize tasks and track progress.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Pick and Place Robot</h3>
+                        <p class="text-gray-400 mb-4">A robotic arm designed for mini-industrial tasks using Arduino Uno, 3D printed parts, and servo motors.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">JavaScript</span>
-                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Express</span>
-                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">PostgreSQL</span>
+                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Arduino</span>
+                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">3D Printing</span>
+                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Servo Motors</span>
                         </div>
                         <div class="flex space-x-3">
                             <a href="#" class="text-purple-400 hover:text-purple-300">View Project</a>
@@ -279,19 +290,19 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project 3 -->
+
+                <!-- Project 3: CodeAppMedia -->
                 <div class="glass-card rounded-lg overflow-hidden hover-translate fade-in shadow-xl">
                     <div class="h-48 overflow-hidden">
-                        <img src="/api/placeholder/600/400" alt="Project 3" class="w-full h-full object-cover">
+                        <img src="/api/placeholder/600/400" alt="CodeAppMedia" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-white">Weather Dashboard</h3>
-                        <p class="text-gray-400 mb-4">A weather application that provides real-time forecasts based on user location.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-white">CodeAppMedia (EDUDIAGNO PVT LTD)</h3>
+                        <p class="text-gray-400 mb-4">A student-friendly coding platform with Python & Java compilers, AR labs, and course modules using HTML, CSS, Firebase, and Figma.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">HTML5</span>
-                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">CSS3</span>
-                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">API Integration</span>
+                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">HTML</span>
+                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Firebase</span>
+                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">AR Labs</span>
                         </div>
                         <div class="flex space-x-3">
                             <a href="#" class="text-purple-400 hover:text-purple-300">View Project</a>
@@ -302,6 +313,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 px-4 bg-gray-800">
@@ -316,7 +328,7 @@
                         </div>
                         <div>
                             <h4 class="font-medium mb-1 text-white">Location</h4>
-                            <p class="text-gray-400">San Francisco, CA, USA</p>
+                            <p class="text-gray-400">Chh. Sambhajinager, Maharashtra, INDIA</p>
                         </div>
                     </div>
                     <div class="flex items-start mb-6">
@@ -325,7 +337,7 @@
                         </div>
                         <div>
                             <h4 class="font-medium mb-1 text-white">Email</h4>
-                            <p class="text-gray-400">yourname@example.com</p>
+                            <p class="text-gray-400">shashank.chavan20022@gmail.com</p>
                         </div>
                     </div>
                     <div class="flex items-start">
@@ -334,7 +346,7 @@
                         </div>
                         <div>
                             <h4 class="font-medium mb-1 text-white">Phone</h4>
-                            <p class="text-gray-400">+1 (123) 456-7890</p>
+                            <p class="text-gray-400">+91 8767891652</p>
                         </div>
                     </div>
                 </div>
@@ -367,14 +379,15 @@
         <div class="container mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
-                    <p class="text-xl font-bold">Your Name</p>
-                    <p class="text-gray-400">Web Developer & Designer</p>
+                    <p class="text-xl font-bold">Shashank Chavan</p>
+                    <p class="text-gray-400">Developer & Designer for this website</p>
                 </div>
                 <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                    <a href="https://github.com/YONE-Shashank" class="text-gray-400 hover:text-white transition duration-300">
                         <i class="fab fa-github text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                    <a href="https://www.linkedin.com/in/shashank87/
+                    " class="text-gray-400 hover:text-white transition duration-300">
                         <i class="fab fa-linkedin-in text-xl"></i>
                     </a>
                     <a href="#" class="text-gray-400 hover:text-white transition duration-300">
@@ -383,7 +396,8 @@
                 </div>
             </div>
             <div class="mt-6 text-center text-gray-400">
-                <p>&copy; 2025 Your Name. All rights reserved.</p>
+                <p>&copy; 2025 Shashank Chavan. Built with passion & <i class="fas fa-coffee"></i>.
+                </p>
             </div>
         </div>
     </footer>
