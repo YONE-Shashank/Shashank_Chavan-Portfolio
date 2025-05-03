@@ -91,6 +91,28 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(139, 92, 246, 0.2);
         }
+        .slide-track {
+    display: flex;
+    flex-direction: column;
+    animation: slideText 12s infinite;
+}
+
+.slide-track div {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+@keyframes slideText {
+    0% { transform: translateY(0); }
+    16.66% { transform: translateY(-40px); }
+    33.33% { transform: translateY(-80px); }
+    50% { transform: translateY(-120px); }
+    66.66% { transform: translateY(-160px); }
+    83.33% { transform: translateY(-200px); }
+    100% { transform: translateY(0); }
+}
+
     </style>
 </head>
 <body class="text-gray-200">
@@ -128,9 +150,17 @@
     <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 px-4">
         <div class="container mx-auto text-center fade-in">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-gradient">Shashank Chavan</span></h1>
-            <p class="text-xl md:text-2xl text-gray-400 mb-4">
-                Web Developer | Python Programmer | Red Hat Certified | AWS Enthusiast | Power BI Analyst | Java Developer
-            </p>
+            <div class="text-xl md:text-2xl text-gray-400 mb-4 h-10 overflow-hidden relative">
+    <div class="slide-track text-gradient font-semibold">
+        <div>Web Developer</div>
+        <div>Python Programmer</div>
+        <div>Red Hat Certified</div>
+        <div>AWS Enthusiast</div>
+        <div>Power BI Analyst</div>
+        <div>Java Developer</div>
+    </div>
+            </div>
+
             <p class="text-lg md:text-xl text-gray-300 mb-8">
                 <p class="text-lg md:text-xl text-gray-300 mb-8">
                     I design websites, code in Python and Java, analyze data with Power BI, and continuously upskill in AWS and Red Hat technologies.
