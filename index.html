@@ -2,50 +2,120 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1, user-scalable=no">
     <title>Shashank Chavan | Portfolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" defer></script>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #333;
-            background-color: #0f172a;
-        }
-        .hover-translate {
-            transition: transform 0.3s ease;
-        }
-        .hover-translate:hover {
-            transform: translateY(-5px);
-        }
-        .section-heading::after {
-            content: "";
-            display: block;
-            width: 70px;
-            height: 3px;
-            background-color: #8b5cf6;
-            margin-top: 8px;
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #8b5cf6;
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background-color: #0f172a;
+    
+}
+
+.hover-translate {
+    transition: transform 0.3s ease;
+}
+
+.hover-translate:hover {
+    transform: translateY(-3px);
+}
+
+.section-heading::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: #8b5cf6;
+    margin-top: 8px;
+}
+
+.nav-link {
+    position: relative;
+    padding: 5px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #d1d5db;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #8b5cf6;
+    transform: translateY(-2px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #8b5cf6;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #8b5cf6;
+    font-weight: bold;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e293b;
+    padding: 0.50 rem 0; /* Reduced vertical padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensure vertical alignment */
+}
+
+a {
+    text-decoration: none;
+}
+
+a .fa-laptop-code {
+    font-size: 1.5rem;
+    color: #8b5cf6;
+}
+
+a span {
+    font-size: 1.2rem;
+    background: linear-gradient(90deg, rgba(67, 56, 202, 1) 0%, rgba(139, 92, 246, 1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@media (min-width: 768px) {
+    .nav-link {
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+
+
         .skill-bar {
             height: 14px; /* increased height */
             border-radius: 7px;
@@ -91,13 +161,66 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(139, 92, 246, 0.2);
         }
+        .slide-track {
+    display: flex;
+    flex-direction: column;
+    animation: slideText 12s infinite;
+}
+
+.slide-track div {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+@keyframes slideText {
+    0% { transform: translateY(0); }
+    16.66% { transform: translateY(-40px); }
+    33.33% { transform: translateY(-80px); }
+    50% { transform: translateY(-120px); }
+    66.66% { transform: translateY(-160px); }
+    83.33% { transform: translateY(-200px); }
+    100% { transform: translateY(0); }
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Black background to make particles visible */
+}
+
+.grow-glow-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.grow-glow-hover:hover {
+    transform: scale(1.02);
+    border: 2px solid #a78bfa; /* soft purple border */
+    box-shadow: 0 0 15px 4px rgba(168, 139, 250, 0.5); /* purple glow */
+}
+
+.h-48 {
+    height: 450px;
+}
+
+
+
+
     </style>
 </head>
 <body class="text-gray-200">
     <!-- Navigation -->
     <header class="fixed w-full bg-gray-900 bg-opacity-90 shadow-lg z-10 backdrop-filter backdrop-blur-md">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#home" class="text-xl font-bold text-white">Shashank Chavan</a>
+            <a href="#home" class="flex items-center space-x-2 text-white text-xl font-bold">
+                <i class="fas fa-laptop-code text-purple-400"></i>
+                <span class="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">Step Into My DevSpace</span>
+              </a>
+              
             <div class="hidden md:flex space-x-6">
                 <a href="#home" class="nav-link text-gray-300 hover:text-purple-400">Home</a>
                 <a href="#about" class="nav-link text-gray-300 hover:text-purple-400">About</a>
@@ -123,14 +246,23 @@
             </div>
         </div>
     </header>
-
+   
+    <div id="particles-js"></div>
    <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 px-4">
         <div class="container mx-auto text-center fade-in">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-gradient">Shashank Chavan</span></h1>
-            <p class="text-xl md:text-2xl text-gray-400 mb-4">
-                Web Developer | Python Programmer | Red Hat Certified | AWS Enthusiast | Power BI Analyst | Java Developer
-            </p>
+            <div class="text-xl md:text-2xl text-gray-400 mb-4 h-10 overflow-hidden relative">
+    <div class="slide-track text-gradient font-semibold">
+        <div>Web Developer</div>
+        <div>Python Programmer</div>
+        <div>Red Hat Certified</div>
+        <div>AWS Enthusiast</div>
+        <div>Power BI Analyst</div>
+        <div>Java Developer</div>
+    </div>
+            </div>
+
             <p class="text-lg md:text-xl text-gray-300 mb-8">
                 <p class="text-lg md:text-xl text-gray-300 mb-8">
                     I design websites, code in Python and Java, analyze data with Power BI, and continuously upskill in AWS and Red Hat technologies.
@@ -142,7 +274,7 @@
             </div>
         </div>
     </section>
-
+    
 
 
     <!-- About Section -->
@@ -245,20 +377,23 @@
         </div>
     </section>
 
-
-    <!-- Projects Section -->
+   
+        <!-- Projects Section -->
     <section id="projects" class="py-20 px-4 bg-gray-900">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold mb-12 section-heading inline-block text-white">My Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1: Bloggerings -->
-                <div class="glass-card rounded-lg overflow-hidden hover-translate fade-in shadow-xl">
+                
+                <!-- Project Card Template -->
+                <!-- Project 1 --> 
+                <div class="glass-card rounded-lg overflow-hidden hover-translate fade-in shadow-xl grow-glow-hover">
+
                     <div class="h-48 overflow-hidden">
-                        <img src="/api/placeholder/600/400" alt="Bloggerings" class="w-full h-full object-cover">
+                        <img src="/project1.jpg" alt="Bloggerings" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-white">Bloggerings</h3>
-                        <p class="text-gray-400 mb-4">A responsive blog creation platform built with HTML, CSS, Tailwind CSS, Figma, and Canva, versioned using Git.</p>
+                        <p class="text-gray-400 mb-4">A responsive blog platform built with HTML, Tailwind CSS, Figma & Canva, versioned with Git.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">HTML</span>
                             <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Tailwind CSS</span>
@@ -271,14 +406,14 @@
                     </div>
                 </div>
 
-                <!-- Project 2: Pick and Place Robot -->
-                <div class="glass-card rounded-lg overflow-hidden hover-translate fade-in shadow-xl">
+                <!-- Project 2 -->
+                <div class="glass-card rounded-lg overflow-hidden hover-translate fade-in shadow-xl grow-glow-hover">
                     <div class="h-48 overflow-hidden">
-                        <img src="/api/placeholder/600/400" alt="Pick and Place Robot" class="w-full h-full object-cover">
+                        <img src="/project1.jpg" alt="Pick and Place Robot" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-white">Pick and Place Robot</h3>
-                        <p class="text-gray-400 mb-4">A robotic arm designed for mini-industrial tasks using Arduino Uno, 3D printed parts, and servo motors.</p>
+                        <p class="text-gray-400 mb-4">A robotic arm for mini-industrial tasks using Arduino Uno, 3D printed parts, and servo motors.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Arduino</span>
                             <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">3D Printing</span>
@@ -291,14 +426,14 @@
                     </div>
                 </div>
 
-                <!-- Project 3: CodeAppMedia -->
-                <div class="glass-card rounded-lg overflow-hidden hover-translate fade-in shadow-xl">
+                <!-- Project 3 -->
+                <div class="glass-card rounded-lg overflow-hidden hover-translate fade-in shadow-xl grow-glow-hover">
                     <div class="h-48 overflow-hidden">
-                        <img src="/api/placeholder/600/400" alt="CodeAppMedia" class="w-full h-full object-cover">
+                        <img src="/project1.jpg" alt="CodeAppMedia" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-white">CodeAppMedia (EDUDIAGNO PVT LTD)</h3>
-                        <p class="text-gray-400 mb-4">A student-friendly coding platform with Python & Java compilers, AR labs, and course modules using HTML, CSS, Firebase, and Figma.</p>
+                        <p class="text-gray-400 mb-4">A student-friendly platform with Python & Java compilers, AR labs, and modules using HTML, Firebase, and Figma.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">HTML</span>
                             <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Firebase</span>
@@ -310,13 +445,13 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4 bg-gray-800">
+     <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-cover bg-center text-white" style="background-image: url('/bg_contact.jpg');">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold mb-12 section-heading inline-block text-white">Get In Touch</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -354,15 +489,21 @@
                     <form id="contact-form" class="space-y-4">
                         <div>
                             <label for="name" class="block mb-1 font-medium text-gray-300">Name</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-white">
+                            <input type="text" id="name" name="name" required
+  class="w-full px-4 py-2 bg-gray-700 bg-opacity-50 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-white">
+
                         </div>
                         <div>
                             <label for="email" class="block mb-1 font-medium text-gray-300">Email</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-white">
+                            <input type="email" id="email" name="email" required
+  class="w-full px-4 py-2 bg-gray-700 bg-opacity-50 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-white">
+
                         </div>
                         <div>
                             <label for="message" class="block mb-1 font-medium text-gray-300">Message</label>
-                            <textarea id="message" name="message" required rows="5" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-white"></textarea>
+                            <textarea id="message" name="message" required rows="5"
+  class="w-full px-4 py-2 bg-gray-700 bg-opacity-50 backdrop-blur-sm border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-white"></textarea>
+
                         </div>
                         <div class="pt-2">
                             <button type="submit" class="btn-gradient text-white px-6 py-3 rounded-md w-full shadow-lg">Send Message</button>
@@ -373,6 +514,7 @@
             </div>
         </div>
     </section>
+    
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8 px-4">
@@ -400,6 +542,7 @@
                 </p>
             </div>
         </div>
+        
     </footer>
 
     <script>
@@ -479,6 +622,53 @@
                 formStatus.textContent = 'Oops! Something went wrong. Please try again later.';
             }
         });
+        
     </script>
+    <!-- Particle Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+          particles: {
+            number: {
+              value: 100, // Number of particles
+              density: {
+                enable: true,
+                value_area: 800
+              }
+            },
+            shape: {
+              type: "polygon", // Particle shape as line
+              stroke: {
+                width: 2,
+                color: "ffffff" // White color for the lines
+              }
+            },
+            size: {
+              value: 3, // Size of the particles (small lines)
+              random: true
+            },
+            move: {
+              enable: true,
+              speed: 2.5,
+              direction: "none", // Particle movement direction
+              random: true,
+              straight: false,
+              out_mode: "out"
+            }
+          },
+          interactivity: {
+            detect_on: "window",
+            events: {
+              onhover: {
+                enable: true,
+                mode: "repulse" // Particles repulse on hover
+              }
+            }
+          },
+          retina_detect: true
+        });
+      </script>
+      
+
 </body>
 </html>
